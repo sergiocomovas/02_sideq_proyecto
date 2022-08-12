@@ -3,7 +3,7 @@
 
 <q-input filled
 label="Escribe aquí... (para guardar pulsa Intro)"
-v-model="todo" @keypress.enter="addTodo"/>
+v-model="todo" type="text" @keypress.enter="addTodo"/>
 
 <div class="q-pa-md"
 style="max-width: 100%; background-color:black;

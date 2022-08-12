@@ -1,12 +1,12 @@
 <template>
   <!--CARCASA TABLAS-->
   <div class="row items-baseline">
-    <div class="col-md-4 q-pa-md text-right">
+    <div class="col-4 q-pa-md text-right">
       <!--CASILLAS-->
       <q-input dense
       label = "ID DE HOTEL"
       class="q-mb-sm"
-      v-model="idhotel" filled type="number" hint="HOTELES POSIBLES: 1 y 2" />
+      v-model="idhotel" filled type="number" hint="HOTELES: 1 y 2 SÓLO" />
       <p class="text-left">🟢 ENTRADA:</p>
       <q-input dense
       mask="YYYY-MM-DD"
@@ -35,7 +35,7 @@
       <p class="text-center">VER EN MI <a target="_blank" :href="url">API↗️</a></p>
     </div>
 
-    <div class="col">
+    <div class="col-8">
       <!--TABLA-->
       <q-table style="height: 550px; width: auto;"
       :rows="respuesta"

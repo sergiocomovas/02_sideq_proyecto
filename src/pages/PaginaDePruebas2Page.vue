@@ -1,5 +1,5 @@
-<template><div>
-  <h1>Página de Pruebas 2</h1>
+<template><div class="q-pr-sm">
+  <h1 class="q-pt-xl text-weight-bolder">Página de Pruebas 2</h1>
   <PruebaTablaSimple/>
   <hr>
   <PruebaTablaFecha />

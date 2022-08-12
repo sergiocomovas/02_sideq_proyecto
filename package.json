@@ -1,8 +1,8 @@
 {
   "name": "sideq_proyecto",
-  "version": "0.0.1",
-  "description": "Prueba de Empleo",
-  "productName": "AppHotelQ",
+  "version": "0.0.2",
+  "description": "Prueba de Empleo para Empresa Mallorquina",
+  "productName": "SideT Tarea",
   "author": "SERGIO <sergio@comovas.es>",
   "private": true,
   "scripts": {
@@ -14,7 +14,8 @@
     "axios": "^0.21.1",
     "quasar": "^2.6.0",
     "vue": "^3.0.0",
-    "vue-router": "^4.0.0"
+    "vue-router": "^4.0.0",
+    "vue3-markdown-it": "^1.0.10"
   },
   "devDependencies": {
     "@quasar/app-vite": "^1.0.0",
@@ -22,7 +23,14 @@
     "eslint": "^8.10.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.20.1",
-    "eslint-plugin-vue": "^9.0.0"
+    "eslint-plugin-vue": "^9.0.0",
+    "workbox-build": "^6.5.4",
+    "workbox-cacheable-response": "^6.5.4",
+    "workbox-core": "^6.5.4",
+    "workbox-expiration": "^6.5.4",
+    "workbox-precaching": "^6.5.4",
+    "workbox-routing": "^6.5.4",
+    "workbox-strategies": "^6.5.4"
   },
   "engines": {
     "node": "^18 || ^16 || ^14.19",

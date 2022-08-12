@@ -3,7 +3,7 @@ const routes = [
     path: '/',
     component: () => import('layouts/MainLayout.vue'),
     children: [
-      { path: '', component: () => import('pages/HotelPage.vue') },
+      { path: '', redirect: '/tareas' },
       { path: '/about', component: () => import('pages/SobreEstoPage.vue') },
       { path: '/tareas', component: () => import('pages/HotelPage.vue') },
       {
@@ -13,6 +13,14 @@ const routes = [
       {
         path: '/pruebas2',
         component: () => import('pages/PaginaDePruebas2Page.vue'),
+      },
+      {
+        path: '/offline',
+        component: () => import('pages/OffLinePage.vue'),
+      },
+      {
+        path: '/pruebas3',
+        component: () => import('pages/PaginaDePrueba3Page.vue'),
       },
     ],
   },

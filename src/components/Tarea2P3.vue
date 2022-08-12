@@ -25,11 +25,11 @@
       <q-btn @click="cambiarmes" color="red-10">MOSTRAR</q-btn>
 
     </div>
-    <div class="col">
+    <div class="col-md-4">
       <!--TABLA-->
       <div class="col q-pa-md">
       <!--TABLA-->
-      <q-table style="height: 450px; width: auto;"
+      <q-table style="height: 400px; min-width: 30px;"
       :rows="respuesta"
       :columns="columns"
       row-key="id"

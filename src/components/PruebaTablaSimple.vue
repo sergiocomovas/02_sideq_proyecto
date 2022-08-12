@@ -1,7 +1,7 @@
 <template><div>
   <h2>PRUEBA SIMPLE</h2>
 
-  <q-range type="range" :min="1" :max="8"
+  <q-range class="q-px-lg" type="range" :min="1" :max="8"
   filled id="busca" v-model="busca" >
   </q-range>
 

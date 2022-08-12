@@ -1,5 +1,5 @@
-<template><div>
-     <h1>Pruebas</h1>
+<template><div class="q-pr-sm">
+     <h1 class="q-pt-xl text-weight-bolder">Pruebas</h1>
 
      <h3 class="text-center" style="color:orangered">1. EJEMPLOS MAYORES</h3>
      <HolaSimpleFetch/>

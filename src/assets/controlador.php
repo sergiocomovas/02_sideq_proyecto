@@ -33,7 +33,7 @@ class TareaController extends BaseController
 
       $model = new TareaModel();
 
-      $where = "`fecha_entrada` >= '$estanciainicio' AND `fecha_salida` <= '$estanciafin'";
+      $where = "`fecha_entrada` BETWEEN '1999-01-01 00:00:00.000000' AND '$estanciafin' AND `fecha_salida` BETWEEN '$estanciainicio' AND '2999-01-01'";
       $resultado = $model->where($where)->findAll();
 
       return json_encode($resultado);

@@ -2,7 +2,7 @@
 
   <!--CARCASA TABLAS-->
   <div class="row items-top">
-    <div class="col-md-6 q-pa-md text-center">
+    <div class="col q-pa-md text-center">
       <!--CASILLAS-->
       <q-date
       v-model="fechas"
@@ -10,19 +10,19 @@
       @range-end="fetch"
     />
 
-    <p class="text-center">
+      <div class="text-center" style="width: 100%;">
 
       <!--PERIODO: Del {{ fechas.from }} hasta {{ fechas.to }}<br>
       <span style="font-weight:bolder;"> TOTAL PERIODO: {{ personas }} en el hotel.</span> <br>-->
-      <span style="font-weight: bold;" v-html="mensajesuma"></span>
-     Ver en mi <a :href="api" target="_blank">API</a>
+      <p class="text-center" style="font-weight: bold;" v-html="mensajesuma"></p>
+      Ver en mi <a :href="api" target="_blank">API</a>
       <br>
 
-    <q-btn rounded color=red-9 @click="restablecerform">RESTABLECER 📅</q-btn>
-    </p>
+      <q-btn rounded color=red-9 @click="restablecerform">RESTABLECER 📅</q-btn>
+      </div>
 
     </div>
-    <div class="col q-pa-md">
+    <div class="col-md-8 q-pa-md">
       <!--TABLA-->
       <q-table style="height: 450px; width: auto;"
       :rows="respuesta"
@@ -68,8 +68,8 @@ export default defineComponent({
         .then((response) => {
           respuesta.value = response.data;
           mensajesuma.value = response.data.length === 1
-            ? `TOTAL: ${response.data.length} persona en los hoteles en periodo del ${fechas.value.from} al ${fechas.value.to}.`
-            : `TOTAL: ${response.data.length} personas en los hoteles en periodo del ${fechas.value.from} al ${fechas.value.to}.`;
+            ? `TOTAL: ${response.data.length} reserva en los hoteles en periodo del ${fechas.value.from} al ${fechas.value.to}.`
+            : `TOTAL: ${response.data.length} reservas en los hoteles en periodo del ${fechas.value.from} al ${fechas.value.to}.`;
 
           api.value = `https://tbot.comovas.es/tarea22api/${fechadesde}/${fechahasta}`;
         });
