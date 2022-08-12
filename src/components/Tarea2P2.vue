@@ -68,8 +68,8 @@ export default defineComponent({
         .then((response) => {
           respuesta.value = response.data;
           mensajesuma.value = response.data.length === 1
-            ? `TOTAL: ${response.data.length} reserva en los hoteles en periodo del ${fechas.value.from} al ${fechas.value.to}.`
-            : `TOTAL: ${response.data.length} reservas en los hoteles en periodo del ${fechas.value.from} al ${fechas.value.to}.`;
+            ? `TOTAL: ${response.data.length} estancia en los hoteles en periodo del ${fechas.value.from} al ${fechas.value.to}.`
+            : `TOTAL: ${response.data.length} estancias en los hoteles en periodo del ${fechas.value.from} al ${fechas.value.to}.`;
 
           api.value = `https://tbot.comovas.es/tarea22api/${fechadesde}/${fechahasta}`;
         });
