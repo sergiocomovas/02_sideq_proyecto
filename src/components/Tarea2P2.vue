@@ -63,15 +63,21 @@ export default defineComponent({
     const fetch = () => {
       const fechadesde = fechas.value.from;
       const fechahasta = fechas.value.to;
+
       axios
         .get(`https://tbot.comovas.es/tarea22api/${fechadesde}/${fechahasta}`)
         .then((response) => {
           respuesta.value = response.data;
-          mensajesuma.value = response.data.length === 1
-            ? `TOTAL: ${response.data.length} estancia en los hoteles en periodo del ${fechas.value.from} al ${fechas.value.to}.`
-            : `TOTAL: ${response.data.length} estancias en los hoteles en periodo del ${fechas.value.from} al ${fechas.value.to}.`;
+          if (fechadesde === fechahasta) {
+            mensajesuma.value = '<p style="color:red;">Elige dos<br> fechas distintas</p>';
+            api.value = '#error';
+          } else {
+            mensajesuma.value = response.data.length === 1
+              ? `TOTAL: ${response.data.length} estancia en los hoteles en periodo del ${fechadesde} al ${fechahasta}.`
+              : `TOTAL: ${response.data.length} estancias en los hoteles en periodo del ${fechadesde} al ${fechahasta}.`;
 
-          api.value = `https://tbot.comovas.es/tarea22api/${fechadesde}/${fechahasta}`;
+            api.value = `https://tbot.comovas.es/tarea22api/${fechadesde}/${fechahasta}`;
+          }
         });
     };
     fetch();
