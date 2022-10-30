@@ -11,5 +11,7 @@
     "javascriptreact",
     "typescript",
     "vue"
-  ]
+  ],
+  "editor.fontLigatures": true,
+  "editor.fontFamily": "'Cascadia Code', 'Hack', Consolas, 'Courier New', monospace"
 }

@@ -3,18 +3,22 @@
   <PruebaTablaSimple/>
   <hr>
   <PruebaTablaFecha />
+  <hr>
+  <PruebaCSS />
 </div></template>
 
 <script>
 import { defineComponent } from 'vue';
 import PruebaTablaSimple from 'components/PruebaTablaSimple.vue';
 import PruebaTablaFecha from 'components/PruebaTablaFecha.vue';
+import PruebaCSS from 'components/PruebaCSS.vue';
 
 export default defineComponent({
   name: 'PaginaDePruebas2Page',
   components: {
     PruebaTablaSimple,
     PruebaTablaFecha,
+    PruebaCSS,
   },
 });
 </script>
